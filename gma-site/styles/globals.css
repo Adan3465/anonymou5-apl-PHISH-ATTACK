@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --gma-bg: #05060b;
+    --gma-card: #101322;
+    --gma-border: #1f2435;
+    --gma-accent: #00ff7f;
+    --gma-accent-soft: rgba(0, 255, 127, 0.15);
+    --gma-text-primary: #f4f7ff;
+    --gma-text-secondary: #aab3d1;
+    --gma-heading: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --gma-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, rgba(0, 255, 127, 0.08), transparent 55%), var(--gma-bg);
+    color: var(--gma-text-primary);
+    font-family: var(--gma-body);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--gma-heading);
+    color: var(--gma-text-primary);
+  }
+
+  ::selection {
+    background: var(--gma-accent);
+    color: var(--gma-bg);
+  }
+}
+
+@layer utilities {
+  .gma-container {
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-10;
+  }
+
+  .glass-panel {
+    background: rgba(9, 12, 20, 0.75);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(0, 255, 127, 0.15);
+    border-radius: 20px;
+  }
+
+  .accent-glow {
+    box-shadow: 0 0 30px rgba(0, 255, 127, 0.35);
+  }
+}
